@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+        android:id="@+id/food_info"
+        android:icon="@drawable/food"
+        android:title="@string/food_information"
+        android:orderInCategory="1"
+
+        />
+
+    <item
+
+        android:id="@+id/info"
+        android:icon="@drawable/info"
+        android:title="@string/add_information"
+        android:orderInCategory="2"/>
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/chat"
+        android:title="@string/start_chat"
+        android:orderInCategory="3"/>
+
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/menu"
+        android:title="@string/menu"
+        android:orderInCategory="4"/>
+
+
+</menu>

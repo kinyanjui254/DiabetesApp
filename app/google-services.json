@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1081200363095",
+    "firebase_url": "https://fbcon-681d8.firebaseio.com",
+    "project_id": "fbcon-681d8",
+    "storage_bucket": "fbcon-681d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081200363095:android:1eb312dda2c6168a",
+        "android_client_info": {
+          "package_name": "com.example.fbcon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081200363095-itcmu229lu4lr09fcri5desb1mc8djd0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fbcon",
+            "certificate_hash": "f11ec7b48900aeeb41880c0795217b627eb45367"
+          }
+        },
+        {
+          "client_id": "1081200363095-sjtc82ha2it2kn7grv4pos9ognvukek4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn1SngZ91GGBNlloGzuP2WR-aqSqJ1evM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081200363095-sjtc82ha2it2kn7grv4pos9ognvukek4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

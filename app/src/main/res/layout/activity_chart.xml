@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".LoginActivity"
+    android:scrollbars="vertical"
+  >
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.jjoe64.graphview.helper.GraphViewXML
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="start"
+            app:seriesData="3=9"
+
+
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/enter_sugar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="enter sugar level "
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/white" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <Button
+            android:id="@+id/submit_value"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorAccent"
+            android:text="@string/submit_value"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+           android:layout_marginBottom="10dp"/>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:id="@+id/bottomnav"
+                android:theme="@style/BottomNavigationTheme"
+                app:menu="@menu/navigation_menu"
+                app:itemBackground="@color/colorPrimary"
+                app:itemTextColor="@color/colorBottomNavigation"
+                app:itemIconTint="@android:color/black"
+                >
+
+            </android.support.design.widget.BottomNavigationView>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
