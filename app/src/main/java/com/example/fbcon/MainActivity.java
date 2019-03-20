@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.fbcon.keydown.EmergencyButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
+    EmergencyButton emergencyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         inputPassword =  findViewById(R.id.password);
         progressBar = findViewById(R.id.progressBar);
         btnResetPassword =  findViewById(R.id.btn_reset_password);
+        emergencyButton = new EmergencyButton();
 
         btnResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,5 +108,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        return emergencyButton.sense(this,keyCode,event);
+
     }
 }

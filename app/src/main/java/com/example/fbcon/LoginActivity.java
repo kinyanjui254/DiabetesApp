@@ -6,12 +6,14 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.fbcon.keydown.EmergencyButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -24,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     private Button btnSignup, btnLogin, btnReset;
+    EmergencyButton emergencyButton;
 
 
     @Override
@@ -33,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
          //FirebaseApp.initializeApp(this);
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
+        emergencyButton = new EmergencyButton();
 
         if (auth.getCurrentUser() == null) {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -112,5 +116,12 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        return emergencyButton.sense(this,keyCode,event);
+
     }
 }

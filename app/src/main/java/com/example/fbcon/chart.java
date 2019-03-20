@@ -108,6 +108,8 @@ public class chart extends AppCompatActivity implements BottomNavigationView.OnN
             case R.id.menu:
                 Intent intent3 = new Intent(chart.this, Logbook.class );
                 startActivity(intent3);
+            case R.id.emergency:
+                startActivity(new Intent(this,EmergencyTestActivity.class));
         }
 
 
